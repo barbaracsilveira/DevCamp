@@ -53,7 +53,13 @@ extension HomeViewController: TrackCellDelegate {
     
     func didSelectCard(movie: MovieModel) {
         let detailViewController = DetailViewController(movie: movie)
-        self.navigationController?.present(detailViewController, animated: true, completion: nil)
+    
+        if UIDevice.isTV() {
+            self.navigationController?.present(detailViewController, animated: true, completion: nil)
+        } else {
+            let navigationController = UINavigationController(rootViewController: detailViewController)
+            self.navigationController?.present(navigationController, animated: true, completion: nil)
+        }
     }
 }
 

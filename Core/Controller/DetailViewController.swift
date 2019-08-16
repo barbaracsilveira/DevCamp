@@ -29,11 +29,16 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         titleLabel.text = movie.title
         durationLabel?.text = movie.duration
         synopsisLabel?.text = movie.synopsis
         thumbImage.sd_setImage(with: URL(string: movie.thumbImage), completed: nil)
         setGradientBackground()
+        
+        #if os(iOS)
+            setBackButton()
+        #endif
     }
     
     private func setGradientBackground() {
@@ -50,4 +55,19 @@ final class DetailViewController: UIViewController {
         }
         self.gradientView.layer.addSublayer(gradientLayer)
     }
+    
+    #if os(iOS)
+    private func setBackButton() {
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "close-icon"), for: .normal)
+        backButton.addTarget(self, action: #selector(didTapBack), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        self.navigationController?.navigationBar.transparent()
+    }
+    
+    @objc func didTapBack() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    #endif
 }

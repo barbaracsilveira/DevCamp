@@ -11,3 +11,11 @@ import UIKit
 final class NavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
+
+extension UINavigationBar {
+    func transparent() {
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.shadowImage = UIImage()
+        self.isTranslucent = true
+    }
+}
