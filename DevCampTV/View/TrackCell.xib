@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TrackCell" reuseIdentifier="TrackCell" id="1VG-V5-cdP" customClass="TrackCell" customModule="DevCampTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="1920" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xh5-az-HJx">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="215"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="brg-hM-m3G">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="1VG-V5-cdP" id="Tjm-vG-HCP"/>
+                            <outlet property="delegate" destination="1VG-V5-cdP" id="MfI-nX-u4n"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xh5-az-HJx" firstAttribute="leading" secondItem="1VG-V5-cdP" secondAttribute="leading" id="DVV-IR-XBg"/>
+                <constraint firstItem="xh5-az-HJx" firstAttribute="top" secondItem="1VG-V5-cdP" secondAttribute="top" id="Ns7-kF-7wy"/>
+                <constraint firstAttribute="bottom" secondItem="xh5-az-HJx" secondAttribute="bottom" id="XQn-pV-l5N"/>
+                <constraint firstAttribute="trailing" secondItem="xh5-az-HJx" secondAttribute="trailing" id="nNt-st-hrm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="18B-Ll-RVw"/>
+            <connections>
+                <outlet property="collectionView" destination="xh5-az-HJx" id="DSY-28-bNY"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

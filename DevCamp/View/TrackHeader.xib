@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UITableViewHeaderFooterView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TrackHeader" reuseIdentifier="TrackHeader" id="0K2-sh-Cy0" customClass="TrackHeader" customModule="DevCamp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-6h-4gv">
+                    <rect key="frame" x="16" y="9.5" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <color key="textColor" name="themeGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-o8-Ohu">
+                    <rect key="frame" x="16" y="33" width="39.5" height="1"/>
+                    <color key="backgroundColor" name="themeYellow"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="21P-hd-D8Y"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ly6-Fx-BMn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jq1-6h-4gv" secondAttribute="trailing" constant="16" id="OnG-jT-P4w"/>
+                <constraint firstItem="0fx-o8-Ohu" firstAttribute="trailing" secondItem="Jq1-6h-4gv" secondAttribute="trailing" id="gbT-ub-Haw"/>
+                <constraint firstItem="Jq1-6h-4gv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0K2-sh-Cy0" secondAttribute="top" constant="8" id="gjC-AE-8vn"/>
+                <constraint firstItem="0fx-o8-Ohu" firstAttribute="top" secondItem="Jq1-6h-4gv" secondAttribute="bottom" constant="4" id="j37-xU-v7m"/>
+                <constraint firstItem="Jq1-6h-4gv" firstAttribute="leading" secondItem="0K2-sh-Cy0" secondAttribute="leading" constant="16" id="kez-bm-HIR"/>
+                <constraint firstAttribute="bottom" secondItem="0fx-o8-Ohu" secondAttribute="bottom" constant="4" id="mqP-UL-i8M"/>
+                <constraint firstItem="0fx-o8-Ohu" firstAttribute="leading" secondItem="Jq1-6h-4gv" secondAttribute="leading" id="xxQ-kD-HWH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ly6-Fx-BMn"/>
+            <connections>
+                <outlet property="title" destination="Jq1-6h-4gv" id="VCP-Kd-5Ka"/>
+            </connections>
+            <point key="canvasLocation" x="53.623188405797109" y="41.183035714285715"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="themeGray">
+            <color red="0.3411764705882353" green="0.36470588235294116" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeYellow">
+            <color red="0.94901960784313721" green="0.70980392156862748" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

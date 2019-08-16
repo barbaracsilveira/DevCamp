@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CardCell" reuseIdentifier="CardCell" id="SB6-vo-JJ5" customClass="CardCell" customModule="DevCampTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="290"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="215" height="290"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewk-do-R0t">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="290"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="themeGray"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ewk-do-R0t" secondAttribute="bottom" id="GJq-Hu-jA8"/>
+                <constraint firstItem="ewk-do-R0t" firstAttribute="leading" secondItem="SB6-vo-JJ5" secondAttribute="leading" id="HEo-CD-kxs"/>
+                <constraint firstItem="ewk-do-R0t" firstAttribute="top" secondItem="SB6-vo-JJ5" secondAttribute="top" id="Kgw-Xp-4iG"/>
+                <constraint firstAttribute="trailing" secondItem="ewk-do-R0t" secondAttribute="trailing" id="e9u-B5-8ze"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iXU-nr-4Ey"/>
+            <connections>
+                <outlet property="cardImage" destination="ewk-do-R0t" id="RA4-BJ-7Zn"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="themeGray">
+            <color red="0.3411764705882353" green="0.36470588235294116" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
